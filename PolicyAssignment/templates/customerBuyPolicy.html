@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="{{url_for('static',filename='customerBuyPolicy.css')}}">
+    <title>Buy Policy</title>
+</head>
+<body>
+
+    <div class="sanlamLogo">
+        <a href="/home" class="logo"> 
+            <img src="https://www.sanlam.co.za/Style%20Library/img/sanlam-logo.png" alt="Sanlam" style="width:150px; height:35px">
+        </a>
+    </div>
+
+    <div class="titleContainer">
+        <h1>Buy policies</h1>
+    </div>
+
+    <div class="headingContainer">
+            <a class="headings" href="https://www.sanlam.co.za/Pages/default.aspx">Sanlam Home</a>
+            <a class="headings" href="https://www.sanlam.co.za/mediacentre/Pages/default.aspx#Default=%7B%22k%22%3A%22%22%2C%22r%22%3A%5B%7B%22n%22%3A%22comMediacategory%22%2C%22t%22%3A%5B%22%5C%22%C7%82%C7%82457870657274204f70696e696f6e73%5C%22%22%5D%2C%22o%22%3A%22and%22%2C%22k%22%3Afalse%2C%22m%22%3Anull%7D%5D%7D">Sanlam Media</a>
+            <a class="headings" href="https://www.sanlam.co.za/about/Pages/default.aspx#strategy">About Sanlam</a>
+    </div>
+   <div class="rule">
+       <hr>
+   </div>
+   <div class="messageContainer1">
+        <h2>The different policies are as follows:</h2>        
+   </div>
+
+
+
+    <div class="tableContainer">
+        <div style="overflow-y:auto;"></div>
+            <table>
+                <tr>
+                <th> Policy name</th>
+                <th> Policy category</th>
+                <th> Monthly preimium</th>
+                </tr> 
+                {% for policy in policies %}
+                <tr>
+                    <td>{{ policy[0] }}</td>
+                    <td>{{ policy[1] }}</td>
+                    <td>{{ policy[2] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+    <div class="formContainer">
+        <h2>Fill in the details below:</h2> <br>
+        <form method="post">
+            <div style="display: flex; flex-direction:row"><label for="policy"><h3>Choose a policy name:</h3></label>
+            <select id="policy" name="policy" required>
+                {% for policy in policies %}
+                <option value="{{policy[0]}}">{{policy[0]}}</option>
+                {% endfor %}
+            </select></div><br><br>
+            <div style="display: flex; flex-direction:row"><label for="date"><h3>Choose a starting date:</h3></label>
+            <input type="date" id="date" name="date"></div><br><br>
+            <button class="button button2" type="submit" ><h3 style="padding: 10px;color:white;font-weight:bold;">
+                Submit &#8594</h3>
+              </button>
+        </form>
+    </div>
+    <div class="backContainer">
+        <form action="javascript:history.back()">
+            <button class="button button1" type="submit"> <h2 style="padding: 0px 8px 2px 8px;color:white;font-size:20px">&#8592 Back</h2> </button><br><br>
+        </form>
+    </div>
+    <footer>
+        <hr><br>
+        Sanlam Ltd. &#169
+    </footer>
+</body>
+</html>

@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: url(https://images.unsplash.com/photo-1567356578218-c3abcd597383?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80);
+    background-size: cover;
+}
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo{
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.logo:hover{
+    text-decoration: none;
+}
+
+.headings{
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.headings:hover{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0,116,200);
+}
+
+h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+}
+
+h3{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 25px;
+}
+
+.rule{
+    position: absolute;
+    top:6.2vh;
+    width: 100vw;
+    height: 1px;
+}
+.sanlamLogo{
+    position: absolute;
+    background-color: transparent;
+    top:10px;
+    left:20px;
+    height:35px;
+    width:150px;
+}
+
+
+.titleContainer{
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    top:0;
+    left:17vw;
+    height:6vh;
+    width:20vw;
+}
+
+.headingContainer{
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    top:0;
+    right:0;
+    height:6vh;
+    width:60vw;
+}
+
+.buttonContainer{
+    position: absolute;
+    background-color: transparent;
+    bottom:16vh;
+    right:35vw;
+    height:10vh;
+    width:30vw;
+}
+
+.button2 {
+    border: none;
+    text-align: right;
+    align-items: right;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    width: auto;
+    height: 8vh;
+    background-color: rgb(0,116,200,0.85);
+    border-radius: 50px;
+}
+
+
+.button2:hover{
+    background-color: rgb(0,116,200);
+}
+
+.messageContainer{
+    position: absolute;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    left:15vw;
+    top:15vh;
+    height: auto;
+    width:70vw;
+    background-color: transparent;
+}
+
+.tableContainer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    left:15vw;
+    top:25vh;
+    height: auto;
+    width:70vw;
+    background-color: transparent;
+}
+
+
+
+.button1 {
+    border: none;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    width: auto;
+    height: 5vh;
+    background-color: rgb(0,116,200,0.85);
+    border-radius: 10px;
+}
+
+.button1:hover{
+    background-color: rgb(0,116,200);
+}
+
+
+footer{
+    position: absolute;
+    height:6vh;
+    bottom:0;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+    color: #eee3d0;
+}
+
+table {
+    font-family: 'Raleway', sans-serif;
+    border-collapse: collapse;
+    width: 50vw;
+}
+  
+th{
+    border: 1px solid #000000;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+td{
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
+}
+  
+
+tr:nth-child(even) {
+    background-color: #000000;
+    color: #eee3d0;
+    font-size: 20px;
+}
+
+form{
+    align-items: center;
+    text-align: center;
+}

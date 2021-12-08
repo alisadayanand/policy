@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: url(https://images.unsplash.com/photo-1515858172286-8d6b43562620?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80);
+    background-size: cover;
+}
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    color: white;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo{
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.logo:hover{
+    text-decoration: none;
+}
+
+.headings{
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.headings:hover{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0,116,200);
+}
+
+h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    color: white;
+}
+
+h3{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 25px;
+    color: white;
+}
+
+.rule{
+    position: absolute;
+    top:6.2vh;
+    width: 100vw;
+    height: 1px;
+}
+.sanlamLogo{
+    position: absolute;
+    background-color: transparent;
+    top:10px;
+    left:20px;
+    height:35px;
+    width:150px;
+}
+
+.wholeSlideShowContainer{
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    top:20vh;
+    left:55vw;
+    height:60vh;
+    width:40vw;
+}
+
+.titleContainer{
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    top:0;
+    left:17vw;
+    height:6vh;
+    width:20vw;
+}
+
+.headingContainer{
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    top:0;
+    right:0;
+    height:6vh;
+    width:60vw;
+}
+
+.policyButtonContainer{
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center;
+    text-align: right;
+    bottom:6vh;
+    right:10vw;
+    height:10vh;
+    width:30vw;
+}
+/* Slideshow styling */
+
+.mySlides {display: none}
+
+img{
+    width:40vw;
+    height:50vh;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+ 
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* buttons */
+
+.button2 {
+    border: none;
+    text-align: right;
+    align-items: right;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    width: auto;
+    height: 8vh;
+    background-color: rgb(0,116,200,0.85);
+    border-radius: 50px;
+}
+
+
+.button2:hover{
+    background-color: rgb(0,116,200);
+}
+
+.messageContainer{
+    position: absolute;
+    align-items: left;
+    left:5vw;
+    top:20vh;
+    height: auto;
+    width:40vw;
+    background-color: transparent;
+}
+
+.registerContainer{
+    position: absolute;
+    text-align: left;
+    left:5vw;
+    top:52.5vh;
+    height: auto;
+    width:520px;
+    background-color: transparent;
+}
+
+form{
+    align-items: left;
+    text-align: left;
+}
+
+input{
+    padding-left: 15px;
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 23px;
+    width: 500px;
+    height: 5vh;
+    display: inline-block;
+    background-color:rgb(247,252,253);
+    color: black;
+    border-width: thin;
+}
+
+input:focus{
+    border-color: black;
+    border-radius: 8px;
+    border-width: medium;
+}
+
+.button1 {
+    border: none;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    width: auto;
+    height: 5vh;
+    background-color: rgb(0,116,200,0.85);
+    border-radius: 10px;
+}
+
+.button1:hover{
+    background-color: rgb(0,116,200);
+}
+
+
+footer{
+    position: absolute;
+    height:6vh;
+    bottom:0;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+    color: white;
+}

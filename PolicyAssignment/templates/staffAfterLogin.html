@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="{{url_for('static',filename='customerAfterLogin.css')}}">
+    <title>Maintenance</title>
+</head>
+<body>
+
+    <div class="sanlamLogo">
+        <a href="/home" class="logo"> 
+            <img src="https://www.sanlam.co.za/Style%20Library/img/sanlam-logo.png" alt="Sanlam" style="width:150px; height:35px">
+        </a>
+    </div>
+
+    <div class="titleContainer">
+        <h1>Maintenance</h1>
+    </div>
+
+    <div class="headingContainer">
+            <a class="headings" href="https://www.sanlam.co.za/Pages/default.aspx">Sanlam Home</a>
+            <a class="headings" href="https://www.sanlam.co.za/mediacentre/Pages/default.aspx#Default=%7B%22k%22%3A%22%22%2C%22r%22%3A%5B%7B%22n%22%3A%22comMediacategory%22%2C%22t%22%3A%5B%22%5C%22%C7%82%C7%82457870657274204f70696e696f6e73%5C%22%22%5D%2C%22o%22%3A%22and%22%2C%22k%22%3Afalse%2C%22m%22%3Anull%7D%5D%7D">Sanlam Media</a>
+            <a class="headings" href="https://www.sanlam.co.za/about/Pages/default.aspx#strategy">About Sanlam</a>
+    </div>
+   <div class="rule">
+       <hr>
+   </div>
+   <div class="messageContainer">
+        <h1> Welcome, {{name}}! </h1><br>
+        <h2> Please select what you'd like to do below</h2>
+   </div>
+
+   
+    <div class="buttonContainer">
+        <form style="text-align:center" method="post">
+        <button class="button button2" type="submit" name="choice" value="editPolicy"><h2 style="padding: 20px;color:white;font-weight:bold;">
+            Edit a policy</h2>
+        </button><br>
+        <h1> &nbsp &nbsp </h1>
+        <br>
+        <button class="button button2" type="submit" name="choice" value="addPolicy"><h2 style="padding: 20px;color:white;font-weight:bold;">
+            Add a policy</h2>
+        </button><br>
+        <h1> &nbsp &nbsp </h1>
+        <br>
+        <button class="button button2" type="submit" name="choice" value="deletePolicy"><h2 style="padding: 20px;color:white;font-weight:bold;">
+            Delete a policy</h2>
+        </button><br>
+        <h1> &nbsp &nbsp </h1>
+        <br>
+        <button class="button button2" type="submit" name="choice" value="editUser"><h2 style="padding: 20px;color:white;font-weight:bold;">
+            Edit a user</h2>
+        </button><br>
+        <h1> &nbsp &nbsp </h1>
+        <br>
+        <button class="button button2" type="submit" name="choice" value="addUser"><h2 style="padding: 20px;color:white;font-weight:bold;">
+            Add a user</h2>
+        </button><br>
+        <h1> &nbsp &nbsp </h1>
+        <br>
+        <button class="button button2" type="submit" name="choice" value="deleteUser"><h2 style="padding: 20px;color:white;font-weight:bold;">
+            Delete a user</h2>
+        </button>
+        </form>
+    </div>
+
+    <div class="policyContainer">
+    <form action="../allPolicies">
+        <button class="button button2" type="submit"><h2 style="padding: 20px;color:white;font-weight:bold;">
+                View policies</h2>
+        </div>
+    </form>
+    <div class="userContainer">
+    <form action="../allUsers">
+        <button class="button button2" type="submit"><h2 style="padding: 20px;color:white;font-weight:bold;">
+                View users</h2>
+        </div>
+    </form>
+
+    <footer>
+        <hr><br>
+        Sanlam Ltd. &#169
+    </footer>
+</body>
+</html>

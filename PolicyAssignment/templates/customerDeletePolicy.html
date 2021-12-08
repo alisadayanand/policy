@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="{{url_for('static',filename='staffEdit.css')}}">
+    <title>Cancel policy</title>
+</head>
+<body>
+
+    <div class="sanlamLogo">
+        <a href="/home" class="logo"> 
+            <img src="https://www.sanlam.co.za/Style%20Library/img/sanlam-logo.png" alt="Sanlam" style="width:150px; height:35px">
+        </a>
+    </div>
+
+    <div class="titleContainer">
+        <h1>Cancel policies</h1>
+    </div>
+
+    <div class="headingContainer">
+            <a class="headings" href="https://www.sanlam.co.za/Pages/default.aspx">Sanlam Home</a>
+            <a class="headings" href="https://www.sanlam.co.za/mediacentre/Pages/default.aspx#Default=%7B%22k%22%3A%22%22%2C%22r%22%3A%5B%7B%22n%22%3A%22comMediacategory%22%2C%22t%22%3A%5B%22%5C%22%C7%82%C7%82457870657274204f70696e696f6e73%5C%22%22%5D%2C%22o%22%3A%22and%22%2C%22k%22%3Afalse%2C%22m%22%3Anull%7D%5D%7D">Sanlam Media</a>
+            <a class="headings" href="https://www.sanlam.co.za/about/Pages/default.aspx#strategy">About Sanlam</a>
+    </div>
+   <div class="rule">
+       <hr>
+   </div>
+   <div class="messageContainer">
+        <h1>Please fill out the relevant information below to cancel the chosen policy</h1><br>
+   </div>
+
+    <div class="formContainer">
+        <form method="post">
+            <div style="display: flex; flex-direction:row"><label for="policyToDelete"><h3>Choose a policy to cancel:</h3></label>
+            <select id="policyToDelete" name="policyToDelete" required>
+                {% for policy in policies %}
+                <option value="{{policy[2]}}">{{policy[2]}}</option>
+                {% endfor %}
+            </select></div><br>
+            <button class="button button1" type="submit"> <h2 style="padding: 0px 8px 2px 8px;color:white;">Confirm &#8594</h2> </button><br><br>
+        </form>        
+    </div>
+
+    <div class="backContainer">
+        <form action="javascript:history.back()">
+            <button class="button button1" type="submit"> <h2 style="padding: 0px 8px 2px 8px;color:white;font-size:20px">&#8592 Back</h2> </button><br><br>
+        </form>
+    </div>
+
+    <footer>
+        <hr><br>
+        Sanlam Ltd. &#169
+    </footer>
+</body>
+</html>

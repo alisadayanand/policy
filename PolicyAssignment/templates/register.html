@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="{{url_for('static',filename='register.css')}}">
+    <title>Sanlam Insurance</title>
+</head>
+<body>
+
+    <div class="sanlamLogo">
+        <a href="/home" class="logo"> 
+            <img src="https://www.sanlam.co.za/Style%20Library/img/sanlam-logo.png" alt="Sanlam" style="width:150px; height:35px">
+        </a>
+    </div>
+
+    <div class="titleContainer">
+        <h1>Insurance Home</h1>
+    </div>
+
+    <div class="headingContainer">
+            <a class="headings" href="https://www.sanlam.co.za/Pages/default.aspx">Sanlam Home</a>
+            <a class="headings" href="https://www.sanlam.co.za/mediacentre/Pages/default.aspx#Default=%7B%22k%22%3A%22%22%2C%22r%22%3A%5B%7B%22n%22%3A%22comMediacategory%22%2C%22t%22%3A%5B%22%5C%22%C7%82%C7%82457870657274204f70696e696f6e73%5C%22%22%5D%2C%22o%22%3A%22and%22%2C%22k%22%3Afalse%2C%22m%22%3Anull%7D%5D%7D">Sanlam Media</a>
+            <a class="headings" href="https://www.sanlam.co.za/about/Pages/default.aspx#strategy">About Sanlam</a>
+    </div>
+   <div class="rule">
+       <hr>
+   </div>
+
+   <div class="messageContainer">
+       <hr>
+        <p>You've made the right call by registering with us; you're thinking ahead.<br><br> No one wants to think about what could go wrong, but 
+        we're here to help when they do. <br><br> As a start, please fill in your details below and click register! We look forward to
+        securing your future together with you!
+        </p><br>
+        <hr>
+    </div>
+    <div class="registerContainer">
+        <p>{{registerMessage}}</p><br>
+        <form method="post">
+            <input type="text" id="name" name="name" placeholder="Name and Surname" required><br><br>
+            <input type="text" id="username" name="username" placeholder="Username" required><br><br>
+            <input type="password" id="Password" name="Password" placeholder="Password" 
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                title="Must contain at least one number, one uppercase and one lowercase letter, and at least 8 or more characters." required><br><br>
+            <input type="password" id="PasswordCheck" name="PasswordCheck" placeholder="Please confirm password" oninput="checkPassword(this)" required><br><br>
+                <script language='javascript' type='text/javascript'>
+                    function checkPassword(input) {
+                        if (input.value != document.getElementById('Password').value) {
+                            input.setCustomValidity('Passwords must match.');
+                        } else {
+                            // input is valid -- reset the error message
+                            input.setCustomValidity('');
+                        }
+                    }
+                </script>
+            
+            <button class="button button1" type="submit"> <h2 style="padding: 0px 8px 2px 8px;color:white;">Register &#8594</h2> </button><br><br>
+        </form>
+    </div>
+
+    <div class="wholeSlideShowContainer">
+            <h3> With us, you can protect what means the most to you</h3><br>
+            <div class="mySlides fade">
+                <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="https://images.unsplash.com/photo-1517554558809-9b4971b38f39?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://images.unsplash.com/photo-1590375993637-716ffa995f51?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" style="width:100%">
+            </div>
+              
+            <div class="mySlides fade">
+                <img src="https://images.unsplash.com/photo-1606787364397-a9c1d754a531?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80" style="width:100%">
+            </div>
+              
+        <br>
+              
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 10000); // Change image every 10 seconds
+            }
+        </script>
+
+    </div>
+
+    <footer>
+        <hr><br>
+        Sanlam Ltd. &#169
+    </footer>
+</body>
+</html>
