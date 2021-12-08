@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+<h1 align="center">Policies</h1>
+
+<p style="text-align:left;">
+  <h2>&nbsp;&nbsp;Policy Name
+  <span style="float:right;">
+  Date Added&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+  </span>
+</p>
+
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <li class="list-group-item">
+    <!--{{ note.data, note.date.strftime("%m/%d/%Y, %H:%M:%S")}}
+    <p style="text-align:left;"> {{note.data}} </p>
+    <p style="text-align:center;"> {{note.date.strftime("%d/%m/%Y, %H:%M:%S")}} </p>-->
+
+    <p style="text-align:left;">
+      {{note.data}}
+      <!--<pre class="tab"> </pre>-->
+      <span style="float:right;">
+        {{note.date.strftime("%d/%m/%Y, %H:%M:%S")}} &nbsp; &nbsp;
+      
+      <span style="float:right;">
+    <button type="button" class="close" onClick="deleteNote({{ note.id }}) ">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </span>
+  </p>
+  </li>
+  {% endfor %}
+
+</ul>
+<form method="POST">
+  <ol>
+    <br/>
+    <h2 align="center">Add a new policy:</h2>
+    {% for i in q %}
+      <br />
+      <input type='radio' value='{{i}}' name="submit" id="note" />{{i}}
+      <br/>
+    {% endfor %}
+  </ol>
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Add Policy</button>
+  </div>
+</form>
+{% endblock %}
